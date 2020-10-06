@@ -1,0 +1,150 @@
+:root {
+    --dark-color: rgba(51, 65, 73, 0.822);
+    --medium-color: rgba(119, 119, 119, 0.2);
+    --light-color: rgb(255, 255, 255);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.7rem;
+    line-height: 1.7;
+    color: #000000;
+    padding: 2rem;
+}
+.header {
+    height: 95vh;
+    background-image: linear-gradient(to bottom right, var(--medium-color), var(--dark-color)), url('../img/sea.jpg');
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0%, 89% 100%, 0% 100%);
+}
+
+
+.text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.heading-primary {
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.heading-primary-main {
+    display: block;
+    font-size: 5rem;
+    letter-spacing: 2.2rem;
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80%{
+        transform: translateX(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.heading-primary-sub {
+    display: block;
+    font-size: 2rem;
+    letter-spacing: 1.7rem;
+    animation-name: moveInRight;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    80%{
+        transform: translateX(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.btn {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    opacity: 0;
+    animation-name: btn;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    position: absolute;
+    top: 120%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes btn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.sm {
+    margin: 1rem 16rem;
+}
+
+.sm a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    height: 6rem;
+    font-size: 3rem;
+    color: #2c2c2c;
+    transition: 0.4s;
+    animation-name: icons;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes icons {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.sm a:hover {
+    background-color: #2c2c2c;
+    color: #ffffff;
+    border-radius: 50%;
+}
+
+img {
+    width: 200px;
+    margin-right: 2rem;
+    margin-bottom: 5rem;
+    float: left;
+}
+
